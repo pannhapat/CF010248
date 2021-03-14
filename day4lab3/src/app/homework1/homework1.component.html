@@ -1,0 +1,58 @@
+
+<div class="row justify-content-md-center">
+ <div class="card-img-overlay divbox0 alert-success" >
+  <div class="alert bg-success "  role="alert">
+  <div class="alert"  role="alert">
+  <div class="alert"  role="alert">
+  <div class="alert"  role="alert">
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+ <div class="container divtop80">
+<div class="col col-sm-2"> </div>
+<div  class="col-md-12">
+    <div class="card border-info " style="max-width: 90rem;">
+
+    <div class="card-body text-dark">
+      <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <h4> Name <span style="color:red;" *ngIf="profileForm.get('name').errors?.required"> * </span> </h4>
+        <input id="name" type="text" placeholder="You answer"formControlName="name" required>
+
+      </div>
+      <div class="form-group">
+         <h4 > Email <span style="color:red;" *ngIf="profileForm.get('email').errors?.required"> * </span>  </h4>
+         <input id="email" type="email" placeholder="You answer" formControlName="email" required>
+         <small *ngIf="profileForm.get('email').errors?.email" class="form-text text-muted">e@mail.com</small>
+      </div>
+      <div class="form-group">
+        <h4 > Postal Address <span style="color:red;" *ngIf="profileForm.get('postal').errors?.required"> * </span> </h4>
+        <input  id="postal"  type="postal" placeholder="You answer" formControlName="postal">
+      </div>
+      <div class="form-group">
+        <h4 > Comments  </h4>
+        <input type="text"  placeholder="You answer" formControlName="comments">
+
+      </div>
+        <button class="btn-primary" type="submit"  [disabled]="!profileForm.valid">Submit</button>
+      </form>
+      </div>
+      </div>
+    </div>
+<div class="col col-sm-2"></div>
+
+</div>
+ </div>
+
+
+
+
+
+
+
+
+
+
+

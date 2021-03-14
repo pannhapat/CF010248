@@ -1,0 +1,14 @@
+
+<nav class="nav nav-pills nav-fill bg-light fixed-top ">
+  <a class="nav-item nav-link btn btn-outline-danger" (click)="toggleEditor('lab3')">lab3 post</a>
+  <a class="nav-item nav-link btn btn-outline-danger" (click)="toggleEditor('homework1')">homework1</a>
+  <a class="nav-item nav-link btn btn-outline-danger" (click)="toggleEditor('homework2')">homework2</a>
+</nav>
+
+<app-post-list *ngIf="show1"></app-post-list>
+
+<app-homework1 *ngIf="show2"></app-homework1>
+
+<app-homework1 *ngIf="show3"></app-homework1>
+
+
