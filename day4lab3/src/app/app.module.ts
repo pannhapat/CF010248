@@ -6,13 +6,15 @@ import { PostListComponent } from './post-list/post-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Homework1Component } from './homework1/homework1.component';
+import { Homework2Component } from './homework2/homework2.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PostListComponent,
-    Homework1Component
+    Homework1Component,
+    Homework2Component
   ],
   imports: [
     BrowserModule,

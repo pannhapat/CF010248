@@ -1,0 +1,44 @@
+<div class="divtop60">
+<div class="row justify-content-md-center">
+<div class="col col-lg-1"> </div>
+
+<div  class="col-md-auto">
+ <div class="card border-info mb-5" style="max-width: 30rem;">
+
+<form [formGroup]="form">
+  <h3> foreign exchange reference rates </h3>
+
+  <div>
+    <h4>FROM MONEY <small> 0-9 <span style="color:red;" *ngIf="form.get('money').errors?.pattern"> * </span> </small> <span style="color:red;" *ngIf="form.get('money').errors?.required"> * </span>: </h4>
+    <input formControlName="money">
+  </div>
+
+  <div>
+    <h4>From: CURRENCY </h4>
+    <select class="custom-select"  (change)="changeRate1($event)" formControlName="rateKey1">
+      <option value="" disabled>From Rate</option>
+      <option *ngFor="let rate of RateKeys" [ngValue]="rate.value">{{rate.key}}</option>
+    </select>
+  </div>
+
+ <div>
+    <h4>TO: CURRENCY </h4>
+    <select class="custom-select" (change)="changeRate2($event)" formControlName="rateKey2">
+      <option value="" disabled>To Rate</option>
+      <option *ngFor="let rate of RateKeys" [ngValue]="rate.value">{{rate.key}}</option>
+    </select>
+  </div>
+
+  <div>
+    <h4>EXCHANGE CALCURATE</h4>
+    <input disable formControlName="money2">
+  </div>
+  <div>
+    <button (click)="calRate()" >Exchange</button>
+  </div>
+</form>
+</div>
+</div>
+<div class="col col-lg-1"> </div>
+</div>
+
